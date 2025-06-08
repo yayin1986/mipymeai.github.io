@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyme.Ai - Tu Socio Tecnológico para Crecer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('fondo.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .fade-in.loaded {
+            opacity: 1;
+        }
+        .hover-effect {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .nav-link-hover:hover {
+            color: #ffeb3b; /* Amarillo */
+            transform: scale(1.1);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        /* Estilos específicos para la sección de Nuestros Trabajos */
+        .work-card {
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 1.5rem;
+            border-radius: 0.375rem; /* rounded-md */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .work-card img {
+            width: 100%;
+            height: 180px; /* Altura fija para las imágenes de trabajo */
+            object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+            border-radius: 0.25rem; /* rounded */
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="font-sans text-white">
+    <div class="overlay min-h-screen flex flex-col">
+        <header class="bg-black bg-opacity-50 py-4">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <a href="#inicio" class="flex items-center">
+                    <img src="logo.jpeg" alt="Logo Pyme.Ai" class="h-8 md:h-10 mr-2">
+                    <span class="text-xl md:text-2xl font-bold text-white">Pyme<span class="text-red-500">.IA</span></span>
+                </a>
+                <nav>
+                    <ul class="flex space-x-4">
+                        <li><a href="index.html" class="hover:text-yellow-500 nav-link-hover">Inicio</a></li>
+                        <li><a href="web.html" class="hover:text-yellow-500 nav-link-hover">Webs Inteligentes</a></li>
+                        <li><a href="app.html" class="hover:text-yellow-500 nav-link-hover">Apps para Pymes</a></li>
+                        <li><a href="chat.html" class="hover:text-yellow-500 nav-link-hover">Chatbots con IA</a></li>
+                        <li><a href="contenido.html" class="hover:text-yellow-500 nav-link-hover">Mantención Digital</a></li>
+                        <li><a href="index.html#contacto" class="hover:text-yellow-500 nav-link-hover">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container mx-auto px-4 py-8 flex-grow">
+            <section id="inicio" class="py-16 text-center md:text-left">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <div class="md:w-1/2 w-full mb-8 md:mb-0">
+                        <img src="imagen1.png" alt="Tecnología e Inteligencia Artificial para Pymes" class="mx-auto rounded-lg shadow-xl max-w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-1/2 w-full">
+                        <h2 class="text-5xl md:text-6xl font-extrabold mb-6 fade-in text-yellow-500 leading-tight">
+                            Potencia tu Pyme con <br> Inteligencia Artificial
+                        </h2>
+                        <p class="text-xl md:text-2xl mb-10 fade-in max-w-full mx-auto">
+                            En Pyme.Ai, te ofrecemos **soluciones informáticas eficientes, innovadoras y atractivas**, diseñadas específicamente para ayudar a las pequeñas y medianas empresas a aumentar sus ventas, optimizar sus tiempos de respuesta y fortalecer su organización interna a través del poder de la **Inteligencia Artificial**.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="nuestros-servicios" class="py-16 fade-in">
+                <h2 class="text-4xl font-bold mb-10 text-yellow-500 text-center">Nuestros Servicios</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-black bg-opacity-75 p-6 rounded-md shadow-md hover-effect flex flex-col items-center text-center">
+                        <img src="imagen2.png" class="w-full h-40 object-cover rounded mb-4">
+                        <h3 class="text-xl font-semibold text-yellow-500 mb-2">Páginas Web Inteligentes</h3>
+                        <p class="text-gray-300 mb-4 flex-grow">Creamos sitios web optimizados con IA para mejorar la experiencia del usuario, el SEO y la conversión.</p>
+                        <a href="#" class="text-red-500 hover:underline mt-auto">Leer más</a>
+                    </div>
+                    <div class="bg-black bg-opacity-75 p-6 rounded-md shadow-md hover-effect flex flex-col items-center text-center">
+                        <img src="imagen3.png" class="w-full h-40 object-cover rounded mb-4">
+                        <h3 class="text-xl font-semibold text-yellow-500 mb-2">Aplicaciones Inteligentes para Pymes</h3>
+                        <p class="text-gray-300 mb-4 flex-grow">Desarrollamos aplicaciones personalizadas con funcionalidades de IA para automatizar tareas y mejorar la toma de decisiones.</p>
+                        <a href="#" class="text-red-500 hover:underline mt-auto">Leer más</a>
+                    </div>
+                    <div class="bg-black bg-opacity-75 p-6 rounded-md shadow-md hover-effect flex flex-col items-center text-center">
+                        <img src="imagen4.png" alt="Chatbots con Inteligencia Artificial" class="w-full h-40 object-cover rounded mb-4">
+                        <h3 class="text-xl font-semibold text-yellow-500 mb-2">Chatbots con Inteligencia Artificial</h3>
+                        <p class="text-gray-300 mb-4 flex-grow">Implementamos chatbots inteligentes para brindar atención al cliente 24/7, calificar leads y mejorar la eficiencia.</p>
+                        <a href="#" class="text-red-500 hover:underline mt-auto">Leer más</a>
+                    </div>
+                    <div class="bg-black bg-opacity-75 p-6 rounded-md shadow-md hover-effect flex flex-col items-center text-center">
+                        <img src="imagen5.png" alt="Mantención de Plataformas Digitales" class="w-full h-40 object-cover rounded mb-4">
+                        <h3 class="text-xl font-semibold text-yellow-500 mb-2">Mantención de Plataformas Digitales</h3>
+                        <p class="text-gray-300 mb-4 flex-grow">Gestionamos tus redes sociales con estrategias impulsadas por IA para mantener tu audiencia activa y comprometida.</p>
+                        <a href="#" class="text-red-500 hover:underline mt-auto">Leer más</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="nuestros-trabajos" class="py-16 fade-in">
+                <h2 class="text-4xl font-bold mb-10 text-yellow-500 text-center">Nuestros Trabajos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="work-card">
+                        <img src="imagen6.png" alt="E-commerce Moda Futura">
+                        <h3 class="text-xl font-semibold text-yellow-500 mb-2">E-commerce "Moda Futura"</h3>
+                        <p class="text-gray-300 mb-4">Desarrollo de una tienda online con integración de IA para recomendaciones de productos y optimización de ventas.</p>
+                        <a href="https://www.zara.com/cl/" target="_blank" class="text-red-500 hover:underline">Ver Proyecto</a>
+                    </div>
+                    <div class="work-card">
+                        <img src="imagen7.png" alt="Sitio Web Cliente B">
+                        <h3 class="text-xl font-semibold text-yellow-500 mb-2">Aplicación "Gestión Óptima"</h3>
+                        <p class="text-gray-300 mb-4">Aplicación de gestión interna para pymes con módulos de inventario y CRM inteligentes.</p>
+                        <a href="https://asana.com/es" target="_blank" class="text-red-500 hover:underline">Ver Proyecto</a>
+                    </div>
+                    <div class="work-card">
+                        <img src="imagen8.png" alt="Sitio Web Cliente C">
+                        <h3 class="text-xl font-semibold text-yellow-500 mb-2">Portal "Conecta Salud"</h3>
+                        <p class="text-gray-300 mb-4">Página web informativa para centro de salud con sistema de citas online y chatbot de preguntas frecuentes.</p>
+                        <a href="https://www.clinicaalemana.cl/" target="_blank" class="text-red-500 hover:underline">Ver Proyecto</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="nosotros" class="py-16 bg-gray-900 text-white fade-in">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-4xl font-bold mb-12 text-yellow-500 text-center">Tu Socio Tecnológico para Crecer</h2>
+
+                    <div class="flex flex-col lg:flex-row items-center gap-12 mb-16">
+                        <div class="lg:w-1/2">
+                            <img src="logo.jpeg" alt="Equipo Pyme.Ai" class="rounded-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+                        </div>
+                        <div class="lg:w-1/2">
+                            <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                                En **Pyme.Ai**, somos más que un proveedor de servicios informáticos: somos emprendedores apasionados por la tecnología y comprometidos con el éxito de las **pequeñas y medianas empresas**. Entendemos profundamente el espíritu emprendedor, la valentía de construir algo propio y los desafíos que implica hacer crecer un negocio en el competitivo mundo actual.
+                            </p>
+                            <p class="text-lg leading-relaxed text-gray-300">
+                                Nuestra propia trayectoria nos ha llevado a reconocer el poder transformador de la **Inteligencia Artificial** y su potencial para nivelar el campo de juego, permitiendo que incluso las pymes con recursos limitados puedan acceder a herramientas que antes eran exclusivas de las grandes corporaciones. Vimos una oportunidad para **fluir junto a otros emprendedores**, ofreciendo soluciones tecnológicas innovadoras y accesibles que realmente marquen la diferencia en sus resultados.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+                        <div class="bg-gray-800 p-8 rounded-lg shadow-md text-center">
+                            <h3 class="text-2xl font-bold text-yellow-500 mb-4">Nuestra Visión</h3>
+                            <p class="text-gray-300">
+                                Ser el **aliado estratégico fundamental** para la expansión y digitalización de las pymes en Latinoamérica, impulsándolas hacia un futuro más eficiente, inteligente y conectado. Nos esforzamos por **comprender tus sueños y ambiciones**.
+                            </p>
+                        </div>
+                        <div class="bg-gray-800 p-8 rounded-lg shadow-md text-center">
+                            <h3 class="text-2xl font-bold text-yellow-500 mb-4">Nuestra Misión</h3>
+                            <p class="text-gray-300">
+                                Proporcionarte las herramientas de **Inteligencia Artificial personalizadas** que necesitas para alcanzar tus objetivos. Desde páginas web inteligentes hasta aplicaciones a medida y gestión de redes sociales.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="max-w-4xl mx-auto text-center mb-12">
+                        <h3 class="text-3xl font-bold text-yellow-500 mb-6">Nuestros Valores</h3>
+                        <p class="text-lg leading-relaxed text-gray-300">
+                            En Pyme.Ai, valoramos la **colaboración, la innovación constante y la transparencia**. Creemos en construir relaciones a largo plazo basadas en la confianza y el entendimiento mutuo. No solo te ofrecemos soluciones tecnológicas, sino que también te brindamos el apoyo y la guía necesarios para que puedas aprovechar al máximo el potencial de la Inteligencia Artificial en tu emprendimiento.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contacto" class="py-16 fade-in">
+                <h2 class="text-2xl font-bold mb-6 text-yellow-500">Contacto</h2>
+                <p class="text-lg text-gray-300 mb-4 text-center">¿Listo para potenciar tu pyme con IA? Contáctanos y exploremos las posibilidades.</p>
+                <div class="bg-black bg-opacity-75 p-8 rounded-md shadow-md max-w-md mx-auto">
+                    <form>
+                        <div class="mb-4">
+                            <label for="nombre" class="block text-gray-300 text-sm font-bold mb-2">Nombre</label>
+                            <input type="text" id="nombre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800" placeholder="Tu nombre">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Correo Electrónico</label>
+                            <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800" placeholder="Tu correo electrónico">
+                        </div>
+                        <div class="mb-4">
+                            <label for="mensaje" class="block text-gray-300 text-sm font-bold mb-2">Mensaje</label>
+                            <textarea id="mensaje" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800" placeholder="Cuéntanos sobre tu proyecto"></textarea>
+                        </div>
+                        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar Mensaje</button>
+                    </form>
+                    <div class="mt-6 text-center text-gray-300">
+                        <p>O contáctanos directamente en:</p>
+                        <p>Email: contacto@pymeai.com</p>
+                        <p>Teléfono: +56 9 1234 5678</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-black bg-opacity-50 py-4 text-center text-gray-300">
+            <p>&copy; 2025 Pyme.Ai - Tu Socio Tecnológico para Crecer</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('header nav a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Prevenir el comportamiento por defecto solo si es un enlace interno (hash)
+                    if (this.hash !== "") {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => {
+                setTimeout(() => {
+                    element.classList.add('loaded');
+                }, 100); // Un pequeño retraso para asegurar la transición
+            });
+
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.pageYOffset;
+                // Ajusta el factor para controlar la velocidad del parallax
+                document.body.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
+            });
+        });
+    </script>
+</body>
+</html>
