@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicaciones Inteligentes para Pymes - Pyme.Ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos copiados directamente de tu index.html y web.html para mantener la consistencia */
+        body {
+            background-image: url('fondo.jpeg'); /* Asegúrate que la ruta sea correcta */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .fade-in.loaded {
+            opacity: 1;
+        }
+        .hover-effect {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .nav-link-hover:hover {
+            color: #ffeb3b; /* Amarillo */
+            transform: scale(1.1);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Ajustes para el contenido de las páginas secundarias */
+        .content-section {
+            background-color: rgba(0, 0, 0, 0.75); /* Mismo color que .work-card en index */
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .content-section h1 {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 1.5rem; /* mb-6 */
+            color: #ffeb3b; /* text-yellow-500 */
+            text-align: center;
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .content-section h1 {
+                font-size: 3rem; /* md:text-5xl */
+            }
+        }
+        .content-section h2 {
+            font-size: 2.25rem; /* text-3xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 1.5rem; /* mb-6 */
+            color: #ffeb3b; /* text-yellow-500 */
+            text-align: center;
+        }
+        .content-section h3 {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            margin-bottom: 1rem; /* mb-4 */
+            color: #ffeb3b; /* text-yellow-500 */
+        }
+        .content-section p, .content-section ul {
+            color: #d1d5db; /* text-gray-300 */
+            margin-bottom: 1rem;
+        }
+        .content-section ul {
+            list-style: disc;
+            margin-left: 1.25rem; /* pl-5 */
+        }
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem; /* rounded-lg */
+            margin-bottom: 2rem; /* mb-8 */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="font-sans text-white">
+    <div class="overlay min-h-screen flex flex-col">
+        <header class="bg-black bg-opacity-50 py-4 fixed w-full z-50 top-0">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <a href="index.html#inicio" class="flex items-center">
+                    <img src="logo.jpeg" alt="Logo Pyme.Ai" class="h-8 md:h-10 mr-2">
+                    <span class="text-xl md:text-2xl font-bold text-white">Pyme<span class="text-red-500">.IA</span></span>
+                </a>
+                <nav>
+                    <ul class="flex space-x-4">
+                        <li><a href="index.html" class="hover:text-yellow-500 nav-link-hover">Inicio</a></li>
+                        <li><a href="web.html" class="hover:text-yellow-500 nav-link-hover">Webs Inteligentes</a></li>
+                        <li><a href="app.html" class="hover:text-yellow-500 nav-link-hover">Apps para Pymes</a></li>
+                        <li><a href="chat.html" class="hover:text-yellow-500 nav-link-hover">Chatbots con IA</a></li>
+                        <li><a href="contenido.html" class="hover:text-yellow-500 nav-link-hover">Mantención Digital</a></li>
+                        <li><a href="index.html#contacto" class="hover:text-yellow-500 nav-link-hover">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container mx-auto px-4 py-8 flex-grow mt-20">
+            <section class="content-section fade-in">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-8 text-yellow-500 text-center">
+                    Aplicaciones Inteligentes para Pymes: Optimiza y Crece
+                </h1>
+
+                <div class="video-container mb-8">
+                    <!-- Puedes reemplazar este video con uno real o usar un placeholder. -->
+                    <video controls class="w-full aspect-video rounded-lg shadow-lg" poster="miniatura-apps.jpg">
+                        <source src="video-apps.mp4" type="video/mp4">
+                        <source src="videos/video-apps.webm" type="video/webm">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-yellow-500 text-center">Descripción General</h2>
+                    <p class="text-lg leading-relaxed text-gray-300">
+                        En Pyme.Ai, llevamos la eficiencia de tu negocio al siguiente nivel con el desarrollo de
+                        **aplicaciones inteligentes personalizadas**. Diseñadas específicamente para las necesidades
+                        de tu pyme, estas apps utilizan la inteligencia artificial para automatizar procesos clave,
+                        mejorar la gestión interna, optimizar la toma de decisiones y, en última instancia,
+                        impulsar tu crecimiento. Olvídate de las soluciones genéricas; nuestras apps se adaptan
+                        a tu flujo de trabajo, brindándote una ventaja competitiva en el mercado.
+                    </p>
+                </div>
+
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-yellow-500 text-center">Características Clave y Ejemplos Concretos</h2>
+                    <div class="feature bg-black bg-opacity-75 p-6 rounded-md shadow-md mb-6 hover-effect">
+                        <h3 class="text-xl font-semibold text-yellow-500 mb-2">Automatización de Procesos Internos</h3>
+                        <p class="text-gray-300">
+                            Desarrollamos apps que automatizan tareas repetitivas y manuales, como la gestión de inventario,
+                            la facturación o la programación de citas, liberando tiempo valioso para tu equipo.
+                            <strong>Ejemplo:</strong> Una app de inventario con IA que predice la demanda de productos
+                            y genera órdenes de compra automáticamente, reduciendo el stock obsoleto y las pérdidas.
+                        </p>
+                    </div>
+                    <div class="feature bg-black bg-opacity-75 p-6 rounded-md shadow-md mb-6 hover-effect">
+                        <h3 class="text-xl font-semibold text-yellow-500 mb-2">Gestión de Clientes (CRM Inteligente)</h3>
+                        <p class="text-gray-300">
+                            Implementamos sistemas CRM (Customer Relationship Management) potenciados por IA
+                            que te permiten seguir el historial de interacciones con tus clientes, identificar patrones
+                            de compra y personalizar la comunicación para maximizar la lealtad y las ventas.
+                            <strong>Ejemplo:</strong> Una app CRM que sugiere el mejor momento para contactar a un cliente
+                            o las ofertas más relevantes basándose en su comportamiento pasado y preferencias.
+                        </p>
+                    </div>
+                    <div class="feature bg-black bg-opacity-75 p-6 rounded-md shadow-md mb-6 hover-effect">
+                        <h3 class="text-xl font-semibold text-yellow-500 mb-2">Análisis y Reportes de Negocio con IA</h3>
+                        <p class="text-gray-300">
+                            Nuestras aplicaciones recopilan y analizan datos de tu operación para generar
+                            reportes inteligentes y dashboards intuitivos. Obtén insights accionables para
+                            tomar decisiones estratégicas informadas y detectar nuevas oportunidades.
+                            <strong>Ejemplo:</strong> Una app que analiza el rendimiento de ventas por producto o servicio,
+                            identificando tendencias y áreas de mejora en tiempo real.
+                        </p>
+                    </div>
+                    <div class="feature bg-black bg-opacity-75 p-6 rounded-md shadow-md mb-6 hover-effect">
+                        <h3 class="text-xl font-semibold text-yellow-500 mb-2">Integración con Sistemas Existentes</h3>
+                        <p class="text-gray-300">
+                            Diseñamos aplicaciones que se integran fluidamente con tus herramientas y plataformas
+                            actuales (ERP, contabilidad, e-commerce, etc.), creando un ecosistema digital unificado
+                            y eficiente.
+                            <strong>Ejemplo:</strong> Una app de gestión de proyectos que se sincroniza automáticamente
+                            con tu software de facturación para agilizar el cobro por tareas completadas.
+                        </p>
+                    </div>
+                    <div class="feature bg-black bg-opacity-75 p-6 rounded-md shadow-md mb-6 hover-effect">
+                        <h3 class="text-xl font-semibold text-yellow-500 mb-2">Acceso Móvil y Multiplataforma</h3>
+                        <p class="text-gray-300">
+                            Todas nuestras aplicaciones están diseñadas para ser accesibles desde cualquier dispositivo,
+                            ya sea un smartphone, tablet o computador, asegurando que tú y tu equipo puedan trabajar
+                            de forma flexible y productiva desde cualquier lugar.
+                            <strong>Ejemplo:</strong> Una app de gestión de equipos de campo donde los técnicos pueden
+                            actualizar el estado de sus tareas y reportar incidencias desde sus dispositivos móviles.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-yellow-500 text-center">Beneficios para tu Pyme</h2>
+                    <ul class="list-disc ml-5 text-lg text-gray-300">
+                        <li><strong>Mayor Eficiencia Operacional:</strong> Automatiza tareas y reduce errores manuales.</li>
+                        <li><strong>Toma de Decisiones Informada:</strong> Accede a datos y análisis de negocio en tiempo real.</li>
+                        <li><strong>Relaciones con Clientes Fortalecidas:</strong> Personaliza la atención y mejora la lealtad.</li>
+                        <li><strong>Reducción de Costos:</strong> Optimiza recursos y minimiza pérdidas por ineficiencias.</li>
+                        <li><strong>Escalabilidad y Flexibilidad:</strong> Las apps crecen contigo y se adaptan a tus necesidades.</li>
+                        <li><strong>Ventaja Competitiva:</strong> Diferénciate en el mercado con herramientas tecnológicas avanzadas.</li>
+                    </ul>
+                </div>
+
+                <div class="text-center mt-10">
+                    <a href="index.html#contacto" class="inline-block bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-xl transition duration-300 ease-in-out">
+                        ¡Descubre cómo una App puede Transformar tu Pyme!
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-black bg-opacity-50 py-4 text-center text-gray-300">
+            <p>&copy; 2025 Pyme.Ai - Tu Socio Tecnológico para Crecer</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('header nav a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Prevenir el comportamiento por defecto solo si es un enlace interno (hash) o a una misma página
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#') || (href.startsWith('index.html#') && window.location.pathname.endsWith('index.html'))) {
+                        e.preventDefault();
+                        const targetId = href.split('#')[1]; // Obtener solo el ID del hash
+                        const targetElement = document.querySelector(`#${targetId}`);
+
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - document.querySelector('header').offsetHeight, // Ajuste para el encabezado fijo
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => {
+                setTimeout(() => {
+                    element.classList.add('loaded');
+                }, 100); // Un pequeño retraso para asegurar la transición
+            });
+
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.pageYOffset;
+                document.body.style.backgroundPositionY = scrollPosition * 0.7 + 'px'; // Ajusta el factor para controlar la velocidad del parallax
+            });
+        });
+    </script>
+</body>
+</html>
